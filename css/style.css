@@ -53,11 +53,6 @@ body {
   cursor: pointer;
 }
 
-.fa-dice {
-  -webkit-transform: translateX(-1px);
-          transform: translateX(-1px);
-}
-
 #random-button:hover {
   background-color: #456990;
 }
