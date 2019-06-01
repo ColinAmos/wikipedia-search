@@ -23,7 +23,6 @@ body{
   min-height: 100%;
 }
 
-
 /* Remove hyperlink underlines */
 a {
   text-decoration: none;
@@ -51,7 +50,6 @@ body{
 #random-button{
   padding: 0;
   border-radius: 50%;
-  //border: none;
   width: 50px;
   height: 50px;
   font-size: 24px;
@@ -63,6 +61,7 @@ body{
 
 #random-button:hover{
   background-color: $random-button-hover;
+  cursor: pointer;
 }
 
 #search-container{
@@ -71,7 +70,7 @@ body{
   align-items: center;
   justify-content: center;
   margin: 30px 0px 30px 0px;
-  max-width: 100%;
+  max-width: 96%;
 }
 
 $input-width: 300px;
