@@ -11,6 +11,7 @@ $result-text: #E4FDE1;
 $paper: #f4f4f4;
 $charcoal: #373737;
 
+
 html, body{
   padding: 0;
   margin: 0;
@@ -22,6 +23,7 @@ body{
   min-height: 100%;
 }
 
+
 /* Remove hyperlink underlines */
 a {
   text-decoration: none;
@@ -31,17 +33,19 @@ body{
   background-color: $background;
 }
 
-#title{
-  color: $charcoal;
-  font-family: 'Patua One', cursive;
-  font-size: 40pt;
-  margin: 50px 0px 30px 0px;
-}
-
 .column-container{
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   align-items: center;
+}
+
+#title{
+  text-align: center;
+  color: $charcoal;
+  font-family: 'Patua One', cursive;
+  font-size: 53px;
+  margin: 50px 0px 30px 0px;
+  max-width: 100%;
 }
 
 #random-button{
@@ -51,7 +55,6 @@ body{
   width: 50px;
   height: 50px;
   font-size: 24px;
-  outline: 0px;
   cursor: pointer;
 }
 
@@ -64,10 +67,12 @@ body{
 }
 
 #search-container{
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 30px 0px 30px 0px;
+  max-width: 100%;
 }
 
 $input-width: 300px;
@@ -77,43 +82,42 @@ $input-width: 300px;
   border-radius: 10px;
   height: 36px;
   width: $input-width;
+  max-width: 100%;
   font-size: 14pt;
-  outline: 0;
   color: black;
 }
 
 #search-button{
   position: absolute;
-  margin: 0px 0px 0px ($input-width/2 + 5);
+  right: 2px;
   text-align: center;
   padding: 6px;
-  background-color: transparent;
-  color: $charcoal;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+
   border: none;
-  outline: 0;
   
   font-size: 16pt;
+  color: $charcoal;
   text-align: center;
 }
 
 #search-button:hover{
     cursor: pointer;
-    transform: scale(1.1, 1.1);
+    background-color: rgba(0, 0, 0, 0.25);
 }
 
-#search-button:active{
-    cursor: pointer;
-    transform: scale(0.9, 0.9);
-}
 
 $shadow-depth: 7px;
 $depress-amount: 3px;
 
-
-#result-button{
-  display: flex;
-  flex-direction: column;
+#results-container {
   width: 800px;
+  max-width: 100%;
+  align-items: stretch;
+}
+
+.result-button{
   background-color: $result-button;
   padding: 15px 30px 15px 30px;
   margin: 10px;
@@ -121,22 +125,22 @@ $depress-amount: 3px;
   box-shadow: 0px $shadow-depth $result-button-shadow;
 }
 
-#result-button:hover{
+.result-button:hover{
   background-color: $result-button-hover;
 }
 
-#result-button:active{
+.result-button:active{
   transform: translateY(calc(#{$shadow-depth} - #{$depress-amount}));
   box-shadow: 0px calc(#{$shadow-depth} - #{$depress-amount}) $result-button-shadow;
 }
 
-#result-title{
+.result-title{
   font-size: 20pt;
   margin: 0px 0px 0px 0px;
   color: $result-text;
 }
 
-#result-snippet{
+.result-snippet{
   font-size: 12pt;
   margin: 0px 0px 0px 0px;
   color: $result-text;

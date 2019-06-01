@@ -21,24 +21,26 @@ body {
   background-color: #F45B69;
 }
 
-#title {
-  color: #373737;
-  font-family: 'Patua One', cursive;
-  font-size: 40pt;
-  margin: 50px 0px 30px 0px;
-}
-
 .column-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#title {
+  text-align: center;
+  color: #373737;
+  font-family: 'Patua One', cursive;
+  font-size: 53px;
+  margin: 50px 0px 30px 0px;
+  max-width: 100%;
 }
 
 #random-button {
@@ -48,7 +50,6 @@ body {
   width: 50px;
   height: 50px;
   font-size: 24px;
-  outline: 0px;
   cursor: pointer;
 }
 
@@ -62,6 +63,7 @@ body {
 }
 
 #search-container {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,6 +74,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 30px 0px 30px 0px;
+  max-width: 100%;
 }
 
 #search-input {
@@ -79,45 +82,38 @@ body {
   border-radius: 10px;
   height: 36px;
   width: 300px;
+  max-width: 100%;
   font-size: 14pt;
-  outline: 0;
   color: black;
 }
 
 #search-button {
   position: absolute;
-  margin: 0px 0px 0px 155px;
+  right: 2px;
   text-align: center;
   padding: 6px;
-  background-color: transparent;
-  color: #373737;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
   border: none;
-  outline: 0;
   font-size: 16pt;
+  color: #373737;
   text-align: center;
 }
 
 #search-button:hover {
   cursor: pointer;
-  -webkit-transform: scale(1.1, 1.1);
-          transform: scale(1.1, 1.1);
+  background-color: rgba(0, 0, 0, 0.25);
 }
 
-#search-button:active {
-  cursor: pointer;
-  -webkit-transform: scale(0.9, 0.9);
-          transform: scale(0.9, 0.9);
-}
-
-#result-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+#results-container {
   width: 800px;
+  max-width: 100%;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.result-button {
   background-color: #028090;
   padding: 15px 30px 15px 30px;
   margin: 10px;
@@ -126,24 +122,24 @@ body {
           box-shadow: 0px 7px #114B5F;
 }
 
-#result-button:hover {
+.result-button:hover {
   background-color: #456990;
 }
 
-#result-button:active {
+.result-button:active {
   -webkit-transform: translateY(calc(7px - 3px));
           transform: translateY(calc(7px - 3px));
   -webkit-box-shadow: 0px calc(7px - 3px) #114B5F;
           box-shadow: 0px calc(7px - 3px) #114B5F;
 }
 
-#result-title {
+.result-title {
   font-size: 20pt;
   margin: 0px 0px 0px 0px;
   color: #E4FDE1;
 }
 
-#result-snippet {
+.result-snippet {
   font-size: 12pt;
   margin: 0px 0px 0px 0px;
   color: #E4FDE1;

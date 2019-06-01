@@ -39,19 +39,17 @@ $(document).ready()
           var newAnchor = document.createElement("A");
           newAnchor.href = link;
           newAnchor.target = "_blank";
+          newAnchor.className = "result-button";
 
           var newResultTitle = document.createElement("P");
-          newResultTitle.id = "result-title";
+          newResultTitle.className = "result-title";
           newResultTitle.innerHTML = title;
           var newResultSnippet = document.createElement("P");
-          newResultSnippet.id = "result-snippet";
+          newResultSnippet.className = "result-snippet";
           newResultSnippet.innerHTML = snippet;
 
-          var newButton = document.createElement("DIV");
-          newButton.id = "result-button";
-          newButton.appendChild(newResultTitle);
-          newButton.appendChild(newResultSnippet);
-          newAnchor.appendChild(newButton);
+          newAnchor.appendChild(newResultTitle);
+          newAnchor.appendChild(newResultSnippet);
           $("#results-container").append(newAnchor);
           resultString = "";
         }
